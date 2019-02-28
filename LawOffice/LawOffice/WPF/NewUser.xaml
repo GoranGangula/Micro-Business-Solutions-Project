@@ -1,0 +1,43 @@
+﻿<Window x:Class="LawOffice.NewUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LawOffice"
+        mc:Ignorable="d"
+        Title="NewUser" Height="500" Width="350"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen" 
+        WindowStyle="None" 
+        FontFamily="Segoe UI Emoji">
+    <Grid>
+        <Rectangle Height="280" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF2281D1"/>
+                    <GradientStop Color="#FF34268A" Offset="1"/>
+                    <GradientStop Color="#FF33288B" Offset="0.546"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle Width="280" Height="382" VerticalAlignment="Bottom" Margin="35,0,35,80" RadiusY="10" RadiusX="10" Fill="White">
+            <Rectangle.Effect>
+                <DropShadowEffect BlurRadius="15" Direction="0" RenderingBias="Quality" ShadowDepth="1" Color="#FFBBBBBB"/>
+            </Rectangle.Effect>
+        </Rectangle>
+
+        <Grid VerticalAlignment="Bottom" Margin="35,0,35,110" Height="216">
+            <Label Content="NEW USER" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="94,-128,89,0" Foreground="Gray" FontSize="18" Width="97"/>
+            <StackPanel VerticalAlignment="Center" Margin="15,-53,15,98" Height="195">
+                <TextBox Name="TextBoxNewUsername" Margin="0,10" materialDesign:HintAssist.Hint="USERNAME" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" />
+                <PasswordBox Name="TextBoxNewPassword" Margin="0,10" materialDesign:HintAssist.Hint="PASSWORD" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontFamily="Champagne &amp; Limousines" FontSize="18"/>
+                <PasswordBox Name="TextBoxNewRepeatPassword" Margin="0,10" materialDesign:HintAssist.Hint="REPEAT PASSWORD" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontFamily="Champagne &amp; Limousines" FontSize="18"/>
+            </StackPanel>
+            <Button Width="113" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10,0,157,49" Content="CREATE" Click="Button_ClickCreateUser"/>
+            <Button Width="116" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="154,0,10,49" Content="CANCEL" Click="Button_ClickCanselUser"/>
+            
+        </Grid>
+    </Grid>
+</Window>

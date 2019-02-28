@@ -1,0 +1,69 @@
+﻿<Window x:Class="LawOffice.Manu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LawOffice"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        Title="Manu" 
+    mc:Ignorable="d" Height="357.928" Width="511.697" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="GridBarraTitulo" Grid.ColumnSpan="2" Background="#FF34268A">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,0">
+                <Button x:Name="ButtonFechar"  Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="31" Height="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Margin="0,2,0,0" Click="Button_ClickExitManu" RenderTransformOrigin="1.069,0.5">
+                    <materialDesign:PackIcon Kind="Power"/>
+                </Button>
+            </StackPanel>
+        </Grid>
+
+        <Grid x:Name="MENU" Background="#FF34268A">
+            <TextBlock Text="MENU" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="WS Simple Gallifreyan" Foreground="White" FontSize="16"/>
+        </Grid>
+        <StackPanel Grid.Row="1" Margin="0,28,0,0">
+            <Button Margin="10" Background="#FF34268A" BorderBrush="#FF34268A" Click="Button_Click_Lawyer">
+                <Grid Width="150">
+                    <materialDesign:PackIcon Kind="GraduationCap" VerticalAlignment="Center"/>
+                    <TextBlock HorizontalAlignment="Center" Text="LAWYER" FontFamily="Champagne &amp; Limousines"/>
+                </Grid>
+            </Button>
+
+            <Button Margin="10" Background="#FF34268A" BorderBrush="#FF34268A" Click="Button_Click_Client">
+                <Grid Width="150">
+                    <materialDesign:PackIcon Kind="Account" VerticalAlignment="Center"/>
+                    <TextBlock HorizontalAlignment="Center" Text="CLIENT" FontFamily="Champagne &amp; Limousines"/>
+                </Grid>
+            </Button>
+
+            <Button Margin="10" Background="#FF34268A" BorderBrush="#FF34268A" Click="Button_Click_Case">
+                <Grid Width="150">
+                    <materialDesign:PackIcon Kind="Briefcase" VerticalAlignment="Center"/>
+                    <TextBlock HorizontalAlignment="Center" Text="CASE" FontFamily="Champagne &amp; Limousines"/>
+                </Grid>
+            </Button>
+
+            <Button Margin="10" Background="#FF34268A" BorderBrush="#FF34268A" Click="Button_Click_UnderCase">
+                <Grid Width="150">
+                    <materialDesign:PackIcon Kind="ContentPaste" VerticalAlignment="Center"/>
+                    <TextBlock HorizontalAlignment="Center" Text="UNDERCASE" FontFamily="Champagne &amp; Limousines"/>
+                </Grid>
+            </Button>
+
+            <Button Margin="10" Background="#FF34268A" BorderBrush="#FF34268A" Click="Button_Click_Task">
+                <Grid Width="150">
+                    <materialDesign:PackIcon Kind="PencilBox" VerticalAlignment="Center"/>
+                    <TextBlock HorizontalAlignment="Center" Text="TASK" FontFamily="Champagne &amp; Limousines"/>
+                </Grid>
+            </Button>
+        </StackPanel>
+        <Image Grid.Column="1" Margin="24,10,22,36" Grid.Row="1" Source="Assets/logo-ex-7.png" Stretch="Fill"/>
+    </Grid>
+</Window>
